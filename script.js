@@ -13,7 +13,7 @@ document.body.appendChild( renderer.domElement );
 //controls.dampingFactor = 0.25;
 //controls.enableZoom = true;
 
-controls = new THREE.TrackballControls( camera);
+controls = new THREE.TrackballControls( camera, renderer.domElement);
 controls.rotateSpeed = 3;
 controls.zoomSpeed = 1.2;
 controls.panSpeed = 0.8;
@@ -58,6 +58,8 @@ loader.load('Conqueror_Tracks.png', function(image) {
 var loader = new THREE.OBJLoader();
 
 loader.setPath('Conqueror_meshes/');
+var head_elements=[];
+
 
 function head(_file){
 loader.load(_file, function ( object ) {
@@ -66,6 +68,8 @@ loader.load(_file, function ( object ) {
       child.material.map = texture_head;
     }
     scene.add( object );
+    head_elements.push(child)
+
     //object.position.y -= 60;
   });
 });
@@ -117,6 +121,41 @@ head('1_turret_01_batch_0.obj');
 head('1_turret_02_batch_0.obj');
 
 
+var obj = {};
+obj.sampleNumber = 1;
+obj.Wireframe=false;
+//obj.test=true;
+
+var gui = new dat.GUI();
+gui.add(obj, 'Wireframe').onChange(function(value ){
+    console.log(value);
+    if (value){
+    material = new THREE.MeshBasicMaterial( { color: 0xffffff, wireframe : true  }  ); 
+    }else{
+    material = new THREE.MeshPhongMaterial();
+    };
+
+    for (var i = 0; i < head_elements.length; i++) {
+    
+        head_elements[i].material = material
+        head_elements[i].material.map = texture_head;
+    }
+
+
+
+});
+
+
+//gui.add(obj, 'test').onChange(function(value ){
+//    for (var i = 0; i < head_elements.length; i++) {
+//    head_elements[i].traverse( function ( child ) {
+//    if ( child instanceof THREE.Mesh ) {
+//      console.log(child.material)
+//    }
+//      });
+//    }
+//
+//});
 var animate = function () {
 	requestAnimationFrame( animate );
 	controls.update();
@@ -125,7 +164,6 @@ var animate = function () {
 };
 
 animate();
-
 
 
 
