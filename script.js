@@ -1,3 +1,7 @@
+//pvr exporter tool https://github.com/buutuud/PvrTexTool
+//https://github.com/dataarts/dat.gui
+//./PVRTexToolCLI -i T-34-85_chassis_01_AM.mali.pvr -d -f r8g8b8a8
+
 var scene = new THREE.Scene();
 
 var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
@@ -121,14 +125,30 @@ head('1_turret_01_batch_0.obj');
 head('1_turret_02_batch_0.obj');
 
 
-var obj = {};
+obj = {};
 obj.sampleNumber = 1;
 obj.Wireframe=false;
 //obj.test=true;
 
-var gui = new dat.GUI();
-gui.add(obj, 'Wireframe').onChange(function(value ){
-    console.log(value);
+gui = new dat.GUI();
+
+dat.GUI.prototype.removeFolder = function(name) {
+    var folder = this.__folders[name];
+    if (!folder) {
+      return;
+    }
+    folder.close();
+    this.__ul.removeChild(folder.domElement.parentNode);
+    delete this.__folders[name];
+    this.onResize();
+ }
+
+
+
+gui.domElement.id = 'gui';
+
+
+gui.add(obj, 'Wireframe').listen().onChange(function(value ){
     if (value){
     material = new THREE.MeshBasicMaterial( { color: 0xffffff, wireframe : true  }  ); 
     }else{
@@ -140,12 +160,74 @@ gui.add(obj, 'Wireframe').onChange(function(value ){
         head_elements[i].material = material
         head_elements[i].material.map = texture_head;
     }
-
-
-
 });
 
 
+//f1.open();
+//obj.test=true;
+
+//var f2 = gui.addFolder('Nations');
+
+//f2.add(obj, 'test').onChange(function(value ){
+//if (value){
+//}else{
+//};
+//});
+
+
+
+
+json = JSON.parse(data);
+
+gui.add(json, "Tanks", json.Tanks).onChange(function(value){
+
+gui.removeFolder('Mods')
+	add_menu(value);
+
+});
+
+//f2.open();
+
+function add_menu(_name){
+
+
+//_name="Conqueror"
+f3 = gui.addFolder('Mods');
+f3.add(json, "Skins", json.Skins[_name]).onChange(function(value) {
+
+console.log(value);
+params=value.split(',')[1];
+value=value.split(',')[0];
+
+obj.Wireframe=false;
+
+var loader = new THREE.ImageLoader();
+loader.setPath('Conqueror_textures/');
+var texture_head = new THREE.Texture();
+loader.load(value, function(image) {
+if (params!=""){
+texture_head.wrapT=texture_head.wrapS=THREE.RepeatWrapping;
+texture_head.offset.set(0,0);
+texture_head.repeat.set(2,2);
+	}
+
+  texture_head.image = image;
+  texture_head.needsUpdate = true;
+} );
+
+
+    material = new THREE.MeshPhongMaterial();
+
+    for (var i = 0; i < head_elements.length; i++) {
+    
+        head_elements[i].material = material
+        head_elements[i].material.map = texture_head;
+    }
+});
+f3.open();
+};
+
+add_menu('Conqueror');
 //gui.add(obj, 'test').onChange(function(value ){
 //    for (var i = 0; i < head_elements.length; i++) {
 //    head_elements[i].traverse( function ( child ) {

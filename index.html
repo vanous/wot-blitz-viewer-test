@@ -2,15 +2,21 @@
 	<head>
 		<title>The conq</title>
 		<style>
-			body { margin: 0; }
+			body { margin: 0; overflow: hidden; }
 			canvas { width: 100%; height: 100% }
+			.main { position: absolute; top: 2px; left: 2px; }
+			#gui{
+			//transform:translate(0%,110px);
+			height:200px;
+			}
 		</style>
 	</head>
 	<body>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/87/three.min.js"></script>
 		<script src="TrackballControls.js"></script>
 		<script src="OBJLoader.js"></script>
-		<script src="dat.gui.min.js"></script>
+		<script src="dat.gui.js"></script>
+		<script src="data.js"></script>
 		<script src="script.js"></script>
 	</body>
 </html>
