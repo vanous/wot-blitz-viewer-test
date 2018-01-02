@@ -16,21 +16,6 @@ var data_full = `{
             "path_meshes":"Conqueror_meshes/",
             "head":{
                 "mesh":[
-                    "1_hull_batch_0.obj",
-                    "1_gun_01_batch_0.obj",
-                    "1_gun_03_batch_0.obj",
-                    "1_gun_05_batch_0.obj",
-                    "1_gun_06_batch_0.obj",
-                    "1_gun_07_batch_0.obj",
-                    "1_turret_01_batch_0.obj",
-                    "1_turret_02_batch_0.obj"],
-                "textures":{
-                    "Default":{"file":"Conqueror.png", "params":""},
-                    "Christmas 1":{"file":"common_01.mali.png", "params":"parameters"},
-                    "Christmas 2":{"file":"common_02.mali.png", "params":"parameters"}
-                }},
-            "tracks":{
-                "mesh":[
                     "1_chassis_wheel_L_01_batch_0.obj",
                     "1_chassis_wheel_L_02_batch_0.obj",
                     "1_chassis_wheel_L_03_batch_0.obj",
@@ -51,6 +36,21 @@ var data_full = `{
                     "1_chassis_wheel_R_08_batch_0.obj",
                     "1_chassis_wheel_R_09_batch_0.obj",
                     "1_chassis_wheel_R_10_batch_0.obj",
+                    "1_hull_batch_0.obj",
+                    "1_gun_01_batch_0.obj",
+                    "1_gun_03_batch_0.obj",
+                    "1_gun_05_batch_0.obj",
+                    "1_gun_06_batch_0.obj",
+                    "1_gun_07_batch_0.obj",
+                    "1_turret_01_batch_0.obj",
+                    "1_turret_02_batch_0.obj"],
+                "textures":{
+                    "Default":{"file":"Conqueror.png", "params":""},
+                    "Christmas 1":{"file":"common_01.mali.png", "params":"parameters"},
+                    "Christmas 2":{"file":"common_02.mali.png", "params":"parameters"}
+                }},
+            "tracks":{
+                "mesh":[
                     "1_chassis_track_L_batch_0.obj",
                     "1_chassis_track_R_batch_0.obj"
                 ],
@@ -61,25 +61,6 @@ var data_full = `{
             "path_meshes":"AMX_50_100.sc2_meshes/",
             "head":{
                 "mesh":[
-"1_gun_01_batch_1.obj",
-"1_gun_02_batch_1.obj",
-"1_gun_03_batch_1.obj",
-"1_HP_Fire_01_batch_0.obj",
-"1_HP_Fire_02_batch_0.obj",
-"1_HP_gui_batch_0.obj",
-"1_HP_gunFire_01_batch_0.obj",
-"1_HP_gunFire_02_batch_0.obj",
-"1_HP_gunFire_03_batch_0.obj",
-"1_hull_batch_1.obj",
-"1_turret_01_batch_1.obj"
-                ],
-                "textures":{
-                    "Default":{"file":"AMX_50_100.mali.png", "params":""}
-                }},
-            "tracks":{
-                "mesh":[
-"1_chassis_track_L_batch_1.obj",
-"1_chassis_track_R_batch_1.obj",
 "1_chassis_wheel_L_01_batch_0.obj",
 "1_chassis_wheel_L_02_batch_0.obj",
 "1_chassis_wheel_L_03_batch_0.obj",
@@ -112,6 +93,25 @@ var data_full = `{
 "1_chassis_wheel_R_14_batch_0.obj",
 "1_chassis_wheel_R_15_batch_0.obj",
 "1_chassis_wheel_R_16_batch_0.obj",
+"1_gun_01_batch_1.obj",
+"1_gun_02_batch_1.obj",
+"1_gun_03_batch_1.obj",
+"1_HP_Fire_01_batch_0.obj",
+"1_HP_Fire_02_batch_0.obj",
+"1_HP_gui_batch_0.obj",
+"1_HP_gunFire_01_batch_0.obj",
+"1_HP_gunFire_02_batch_0.obj",
+"1_HP_gunFire_03_batch_0.obj",
+"1_hull_batch_1.obj",
+"1_turret_01_batch_1.obj"
+                ],
+                "textures":{
+                    "Default":{"file":"AMX_50_100.mali.png", "params":""}
+                }},
+            "tracks":{
+                "mesh":[
+"1_chassis_track_L_batch_1.obj",
+"1_chassis_track_R_batch_1.obj",
 "1_HP_Track_Exhaus_01_batch_0.obj",
 "1_HP_Track_Exhaus_02_batch_0.obj",
 "1_HP_Track_LFront_batch_0.obj",
@@ -130,25 +130,6 @@ var data_full = `{
             "path_meshes":"Van_Helsing.sc2_meshes/",
             "head":{
                 "mesh":[
-"1_gun_01_batch_1.obj",
-"1_HP_Custom_gun_01_batch_0.obj",
-"1_HP_Custom_hull_01_batch_0.obj",
-"1_HP_Custom_hull_02_batch_0.obj",
-"1_HP_Custom_hull_03_batch_0.obj",
-"1_HP_Fire_01_batch_0.obj",
-"1_HP_Fire_02_batch_0.obj",
-"1_HP_gui_batch_0.obj",
-"1_HP_gunFire_01_batch_0.obj",
-"1_hull_batch_1.obj",
-"1_turret_01_batch_1.obj"
-                ],
-                "textures":{
-                    "Default":{"file":"Van_Helsing.mali.png", "params":""}
-                }},
-            "tracks":{
-                "mesh":[
-"1_chassis_track_L_batch_1.obj",
-"1_chassis_track_R_batch_1.obj",
 "1_chassis_wheel_L_01_batch_0.obj",
 "1_chassis_wheel_L_02_batch_0.obj",
 "1_chassis_wheel_L_03_batch_0.obj",
@@ -173,6 +154,25 @@ var data_full = `{
 "1_chassis_wheel_R_10_batch_0.obj",
 "1_chassis_wheel_R_11_batch_0.obj",
 "1_chassis_wheel_R_12_batch_0.obj",
+"1_gun_01_batch_1.obj",
+"1_HP_Custom_gun_01_batch_0.obj",
+"1_HP_Custom_hull_01_batch_0.obj",
+"1_HP_Custom_hull_02_batch_0.obj",
+"1_HP_Custom_hull_03_batch_0.obj",
+"1_HP_Fire_01_batch_0.obj",
+"1_HP_Fire_02_batch_0.obj",
+"1_HP_gui_batch_0.obj",
+"1_HP_gunFire_01_batch_0.obj",
+"1_hull_batch_1.obj",
+"1_turret_01_batch_1.obj"
+                ],
+                "textures":{
+                    "Default":{"file":"Van_Helsing.mali.png", "params":""}
+                }},
+            "tracks":{
+                "mesh":[
+"1_chassis_track_L_batch_1.obj",
+"1_chassis_track_R_batch_1.obj",
 "1_HP_Track_Exhaus_01_batch_0.obj",
 "1_HP_Track_Exhaus_02_batch_0.obj",
 "1_HP_Track_LFront_batch_0.obj",
@@ -191,6 +191,20 @@ var data_full = `{
             "path_meshes":"Type62.sc2_meshes/",
             "head":{
                 "mesh":[
+"1_chassis_wheel_L_01_batch_0.obj",
+"1_chassis_wheel_L_02_batch_0.obj",
+"1_chassis_wheel_L_03_batch_0.obj",
+"1_chassis_wheel_L_04_batch_0.obj",
+"1_chassis_wheel_L_05_batch_0.obj",
+"1_chassis_wheel_L_06_batch_0.obj",
+"1_chassis_wheel_L_07_batch_0.obj",
+"1_chassis_wheel_R_01_batch_0.obj",
+"1_chassis_wheel_R_02_batch_0.obj",
+"1_chassis_wheel_R_03_batch_0.obj",
+"1_chassis_wheel_R_04_batch_0.obj",
+"1_chassis_wheel_R_05_batch_0.obj",
+"1_chassis_wheel_R_06_batch_0.obj",
+"1_chassis_wheel_R_07_batch_0.obj",
 "1_gun_01_batch_0.obj",
 "1_HP_Fire_01_batch_0.obj",
 "1_HP_Fire_02_batch_0.obj",
@@ -208,20 +222,6 @@ var data_full = `{
                 "mesh":[
 "1_chassis_track_L_batch_0.obj",
 "1_chassis_track_R_batch_0.obj",
-"1_chassis_wheel_L_01_batch_0.obj",
-"1_chassis_wheel_L_02_batch_0.obj",
-"1_chassis_wheel_L_03_batch_0.obj",
-"1_chassis_wheel_L_04_batch_0.obj",
-"1_chassis_wheel_L_05_batch_0.obj",
-"1_chassis_wheel_L_06_batch_0.obj",
-"1_chassis_wheel_L_07_batch_0.obj",
-"1_chassis_wheel_R_01_batch_0.obj",
-"1_chassis_wheel_R_02_batch_0.obj",
-"1_chassis_wheel_R_03_batch_0.obj",
-"1_chassis_wheel_R_04_batch_0.obj",
-"1_chassis_wheel_R_05_batch_0.obj",
-"1_chassis_wheel_R_06_batch_0.obj",
-"1_chassis_wheel_R_07_batch_0.obj",
 "1_HP_Track_Exhaus_1_batch_0.obj",
 "1_HP_Track_LFront_batch_0.obj",
 "1_HP_Track_LRear_batch_0.obj",
@@ -239,6 +239,14 @@ var data_full = `{
             "path_meshes":"Tetrarch_LL.sc2_meshes/",
             "head":{
                 "mesh":[
+"1_chassis_wheel_L_01_batch_0.obj",
+"1_chassis_wheel_L_02_batch_0.obj",
+"1_chassis_wheel_L_03_batch_0.obj",
+"1_chassis_wheel_L_04_batch_0.obj",
+"1_chassis_wheel_R_01_batch_0.obj",
+"1_chassis_wheel_R_02_batch_0.obj",
+"1_chassis_wheel_R_03_batch_0.obj",
+"1_chassis_wheel_R_04_batch_0.obj",
 "1_gun_01_batch_1.obj",
 "1_HP_Fire_01_batch_0.obj",
 "1_HP_Fire_02_batch_0.obj",
@@ -254,14 +262,6 @@ var data_full = `{
                 "mesh":[
 "1_chassis_track_L_batch_1.obj",
 "1_chassis_track_R_batch_1.obj",
-"1_chassis_wheel_L_01_batch_0.obj",
-"1_chassis_wheel_L_02_batch_0.obj",
-"1_chassis_wheel_L_03_batch_0.obj",
-"1_chassis_wheel_L_04_batch_0.obj",
-"1_chassis_wheel_R_01_batch_0.obj",
-"1_chassis_wheel_R_02_batch_0.obj",
-"1_chassis_wheel_R_03_batch_0.obj",
-"1_chassis_wheel_R_04_batch_0.obj",
 "1_HP_Track_Exhaus_01_batch_0.obj",
 "1_HP_Track_Exhaus_02_batch_0.obj",
 "1_HP_Track_LFront_batch_0.obj",
@@ -280,21 +280,6 @@ var data_full = `{
             "path_meshes":"DickerMax.sc2_meshes/",
             "head":{
                 "mesh":[
-"1_gun_03_batch_0.obj",
-"1_HP_Fire_01_batch_0.obj",
-"1_HP_Fire_02_batch_0.obj",
-"1_HP_gui_batch_0.obj",
-"1_HP_gunFire_03_batch_0.obj",
-"1_hull_batch_0.obj",
-"1_turret_01_batch_0.obj"
-                ],
-                "textures":{
-                    "Default":{"file":"DickerMax.mali.png", "params":""}
-                }},
-            "tracks":{
-                "mesh":[
-"1_chassis_track_L_batch_0.obj",
-"1_chassis_track_R_batch_0.obj",
 "1_chassis_wheel_L_01_batch_0.obj",
 "1_chassis_wheel_L_02_batch_0.obj",
 "1_chassis_wheel_L_03_batch_0.obj",
@@ -323,6 +308,21 @@ var data_full = `{
 "1_chassis_wheel_R_12_batch_0.obj",
 "1_chassis_wheel_R_13_batch_0.obj",
 "1_chassis_wheel_R_14_batch_0.obj",
+"1_gun_03_batch_0.obj",
+"1_HP_Fire_01_batch_0.obj",
+"1_HP_Fire_02_batch_0.obj",
+"1_HP_gui_batch_0.obj",
+"1_HP_gunFire_03_batch_0.obj",
+"1_hull_batch_0.obj",
+"1_turret_01_batch_0.obj"
+                ],
+                "textures":{
+                    "Default":{"file":"DickerMax.mali.png", "params":""}
+                }},
+            "tracks":{
+                "mesh":[
+"1_chassis_track_L_batch_0.obj",
+"1_chassis_track_R_batch_0.obj",
 "1_HP_Track_LFront_batch_0.obj",
 "1_HP_Track_LRear_batch_0.obj",
 "1_HP_Track_RFront_batch_0.obj",
