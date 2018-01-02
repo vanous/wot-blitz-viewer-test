@@ -1,6 +1,7 @@
 //pvr exporter tool https://github.com/buutuud/PvrTexTool
 //https://github.com/dataarts/dat.gui
-//./PVRTexToolCLI -i T-34-85_chassis_01_AM.mali.pvr -d -f r8g8b8a8
+//./PVRTexToolCLI -i T-34-85_chassis_01_AM.mali.pvr -d -f RGBG8888
+//for i in `ls`; do ../PVRTexToolCLI -i $i -d -f RGBG8888; done
 
 var scene = new THREE.Scene();
 
@@ -43,34 +44,58 @@ scene.add(keyLight);
 scene.add(fillLight);
 scene.add(backLight);
 
+
+
+head_elements=[];
+function head_texture(textr){
+
+obj.Wireframe=false;
+
 var loader = new THREE.ImageLoader();
-loader.setPath('Conqueror_textures/');
-var texture_head = new THREE.Texture();
-loader.load('Conqueror.png', function(image) {
+loader.setPath(selected_tank.path_textures);
+texture_head = new THREE.Texture();
+loader.load(textr.file, function(image) {
+if (textr.params!=""){
+    texture_head.wrapT=texture_head.wrapS=THREE.RepeatWrapping;
+    texture_head.offset.set(0,0);
+    texture_head.repeat.set(2,2);
+	}
+
   texture_head.image = image;
   texture_head.needsUpdate = true;
 } );
 
-var texture_tracks = new THREE.Texture();
-loader.load('Conqueror_Tracks.png', function(image) {
+
+    material = new THREE.MeshPhongMaterial();
+
+    for (var i = 0; i < head_elements.length; i++) {
+    
+        head_elements[i].material = material
+        head_elements[i].material.map = texture_head;
+    }
+};
+function track_texture(_file){
+var loader = new THREE.ImageLoader();
+loader.setPath(selected_tank.path_textures);
+texture_tracks = new THREE.Texture();
+loader.load(_file, function(image) {
     texture_tracks.wrapT=THREE.RepeatWrapping
   texture_tracks.image = image;
   texture_tracks.needsUpdate = true;
 
 } );
+};
 
-var loader = new THREE.OBJLoader();
-
-loader.setPath('Conqueror_meshes/');
-var head_elements=[];
 
 
 function head(_file){
+var loader = new THREE.OBJLoader();
+loader.setPath(selected_tank.path_meshes);
 loader.load(_file, function ( object ) {
   object.traverse( function ( child ) {
-    if ( child instanceof THREE.Mesh ) {
-      child.material.map = texture_head;
-    }
+    //if ( child instanceof THREE.Mesh ) {
+    //  child.material.map = texture_head;
+    //}
     scene.add( object );
     head_elements.push(child)
 
@@ -80,6 +105,9 @@ loader.load(_file, function ( object ) {
 };
 
 function tracks(_file){
+var loader = new THREE.OBJLoader();
+loader.setPath(selected_tank.path_meshes);
+//loader.setPath('Conqueror_meshes/');
 loader.load(_file, function ( object ) {
   object.traverse( function ( child ) {
     if ( child instanceof THREE.Mesh ) {
@@ -91,38 +119,6 @@ loader.load(_file, function ( object ) {
 });
 };
 
-
-tracks('1_chassis_wheel_L_01_batch_0.obj');
-tracks('1_chassis_wheel_L_02_batch_0.obj');
-tracks('1_chassis_wheel_L_03_batch_0.obj');
-tracks('1_chassis_wheel_L_04_batch_0.obj');
-tracks('1_chassis_wheel_L_05_batch_0.obj');
-tracks('1_chassis_wheel_L_06_batch_0.obj');
-tracks('1_chassis_wheel_L_07_batch_0.obj');
-tracks('1_chassis_wheel_L_08_batch_0.obj');
-tracks('1_chassis_wheel_L_09_batch_0.obj');
-tracks('1_chassis_wheel_L_10_batch_0.obj');
-tracks('1_chassis_track_L_batch_0.obj');
-tracks('1_chassis_track_R_batch_0.obj');
-tracks('1_chassis_wheel_R_01_batch_0.obj');
-tracks('1_chassis_wheel_R_02_batch_0.obj');
-tracks('1_chassis_wheel_R_03_batch_0.obj');
-tracks('1_chassis_wheel_R_04_batch_0.obj');
-tracks('1_chassis_wheel_R_05_batch_0.obj');
-tracks('1_chassis_wheel_R_06_batch_0.obj');
-tracks('1_chassis_wheel_R_07_batch_0.obj');
-tracks('1_chassis_wheel_R_08_batch_0.obj');
-tracks('1_chassis_wheel_R_09_batch_0.obj');
-tracks('1_chassis_wheel_R_10_batch_0.obj');
-head('1_hull_batch_0.obj');
-head('1_gun_01_batch_0.obj');
-head('1_gun_03_batch_0.obj');
-head('1_gun_05_batch_0.obj');
-head('1_gun_06_batch_0.obj');
-head('1_gun_07_batch_0.obj');
-head('1_hull_batch_0.obj');
-head('1_turret_01_batch_0.obj');
-head('1_turret_02_batch_0.obj');
 
 
 obj = {};
@@ -174,15 +170,48 @@ gui.add(obj, 'Wireframe').listen().onChange(function(value ){
 //};
 //});
 
+function clearScene(){
+    for( var i = scene.children.length - 1; i >= 3; i--) { 
+     obj = scene.children[i];
+         scene.remove(obj);
+    }
+};
+
+function add_tank(){
+
+clearScene();
+selected_tank.head.mesh.forEach(function(entry) {
+    console.log("head obj: ", entry);
+    head(entry);
+});
+
+track_texture(selected_tank.tracks.textures.default);
+
+textr=selected_tank.head.textures.Default;
+console.log("head texture: ",textr);
+head_texture(textr);
+
+selected_tank.tracks.mesh.forEach(function(entry) {
+    console.log("track obj: ", entry);
+    tracks(entry);
+});
 
 
-
+};
 json = JSON.parse(data);
+json_full = JSON.parse(data_full);
+selected_tank="";
+ff=false;
 
 gui.add(json, "Tanks", json.Tanks).onChange(function(value){
-
-gui.removeFolder('Mods')
-	add_menu(value);
+json = JSON.parse(data); //datgui keeeps changind the data, cannot unbind
+//console.log(json);
+selected_tank=json_full.Tanks[value];
+if(ff){
+    gui.remove(ff);
+};
+add_menu(value);
+add_tank();
 
 });
 
@@ -190,54 +219,25 @@ gui.removeFolder('Mods')
 
 function add_menu(_name){
 
-
+//console.log(selected_tank, _name)
+//gui.removeFolder('Mods')
 //_name="Conqueror"
-f3 = gui.addFolder('Mods');
-f3.add(json, "Skins", json.Skins[_name]).onChange(function(value) {
-
-console.log(value);
-params=value.split(',')[1];
-value=value.split(',')[0];
+//f3 = gui.addFolder('Mods');
+ff=gui.add(json, "Skins", json.Skins[_name]).onChange(function(value) {
+//console.log(value);
+//console.log(selected_tank.head.textures[value]);
 
 obj.Wireframe=false;
-
-var loader = new THREE.ImageLoader();
-loader.setPath('Conqueror_textures/');
-var texture_head = new THREE.Texture();
-loader.load(value, function(image) {
-if (params!=""){
-texture_head.wrapT=texture_head.wrapS=THREE.RepeatWrapping;
-texture_head.offset.set(0,0);
-texture_head.repeat.set(2,2);
-	}
-
-  texture_head.image = image;
-  texture_head.needsUpdate = true;
-} );
-
-
-    material = new THREE.MeshPhongMaterial();
-
-    for (var i = 0; i < head_elements.length; i++) {
-    
-        head_elements[i].material = material
-        head_elements[i].material.map = texture_head;
-    }
+textr=selected_tank.head.textures[value]
+//console.log(textr);
+head_texture(textr);
 });
-f3.open();
+//f3.open();
 };
 
-add_menu('Conqueror');
-//gui.add(obj, 'test').onChange(function(value ){
-//    for (var i = 0; i < head_elements.length; i++) {
-//    head_elements[i].traverse( function ( child ) {
-//    if ( child instanceof THREE.Mesh ) {
-//      console.log(child.material)
-//    }
-//      });
-//    }
-//
-//});
+selected_tank=json_full.Tanks["Conqueror"];
+add_tank();
+
 var animate = function () {
 	requestAnimationFrame( animate );
 	controls.update();
