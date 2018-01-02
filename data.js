@@ -276,8 +276,8 @@ var data_full = `{
                 "textures":{"default":"Tetrarch_LL_tarck.mali.png"}}
         },
 "Dicker Max":{
-            "path_textures":"/DickerMax.sc2_textures/",  
-            "path_meshes":"/DickerMax.sc2_meshes/",
+            "path_textures":"DickerMax.sc2_textures/",  
+            "path_meshes":"DickerMax.sc2_meshes/",
             "head":{
                 "mesh":[
 "1_gun_03_batch_0.obj",
