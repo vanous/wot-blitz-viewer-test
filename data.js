@@ -98,7 +98,6 @@ var data_full = `{
 "1_gun_03_batch_1.obj",
 "1_HP_Fire_01_batch_0.obj",
 "1_HP_Fire_02_batch_0.obj",
-"1_HP_gui_batch_0.obj",
 "1_HP_gunFire_01_batch_0.obj",
 "1_HP_gunFire_02_batch_0.obj",
 "1_HP_gunFire_03_batch_0.obj",
@@ -161,7 +160,6 @@ var data_full = `{
 "1_HP_Custom_hull_03_batch_0.obj",
 "1_HP_Fire_01_batch_0.obj",
 "1_HP_Fire_02_batch_0.obj",
-"1_HP_gui_batch_0.obj",
 "1_HP_gunFire_01_batch_0.obj",
 "1_hull_batch_1.obj",
 "1_turret_01_batch_1.obj"
@@ -208,7 +206,6 @@ var data_full = `{
 "1_gun_01_batch_0.obj",
 "1_HP_Fire_01_batch_0.obj",
 "1_HP_Fire_02_batch_0.obj",
-"1_HP_gui_batch_0.obj",
 "1_HP_gunFire_01_batch_0.obj",
 "1_hull_batch_0.obj",
 "1_turret_01_batch_0.obj"
@@ -250,7 +247,6 @@ var data_full = `{
 "1_gun_01_batch_1.obj",
 "1_HP_Fire_01_batch_0.obj",
 "1_HP_Fire_02_batch_0.obj",
-"1_HP_gui_batch_0.obj",
 "1_HP_gunFire_01_batch_0.obj",
 "1_hull_batch_1.obj",
 "1_turret_01_batch_1.obj"
@@ -311,7 +307,6 @@ var data_full = `{
 "1_gun_03_batch_0.obj",
 "1_HP_Fire_01_batch_0.obj",
 "1_HP_Fire_02_batch_0.obj",
-"1_HP_gui_batch_0.obj",
 "1_HP_gunFire_03_batch_0.obj",
 "1_hull_batch_0.obj",
 "1_turret_01_batch_0.obj"
