@@ -2,7 +2,8 @@
 //https://github.com/dataarts/dat.gui
 //./PVRTexToolCLI -i T-34-85_chassis_01_AM.mali.pvr -d -f RGBG8888
 //for i in `ls`; do ../PVRTexToolCLI -i $i -d -f RGBG8888; done
-
+//https://cdnjs.cloudflare.com/ajax/libs/three.js/89/three.min.js
+//
 var scene = new THREE.Scene();
 
 var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
@@ -55,11 +56,23 @@ var loader = new THREE.ImageLoader();
 loader.setPath(selected_tank.path_textures);
 texture_head = new THREE.Texture();
 loader.load(textr.file, function(image) {
-if (textr.params!=""){
+if (textr.params=="flip"){
+    texture_head.wrapT = THREE.RepeatWrapping;
+    texture_head.repeat.y = - 1;
+	}else if (textr.params=="repeat"){
+    
     texture_head.wrapT=texture_head.wrapS=THREE.RepeatWrapping;
     texture_head.offset.set(0,0);
     texture_head.repeat.set(2,2);
-	}
+    
+    }else{
+    
+    
+    }
+
+
+
+    
 
   texture_head.image = image;
   texture_head.needsUpdate = true;
@@ -236,6 +249,7 @@ head_texture(textr);
 };
 
 selected_tank=json_full.Tanks["Conqueror"];
+selected_tank=json_full.Tanks["Dicker Max"];
 add_tank();
 
 var animate = function () {

@@ -46,8 +46,8 @@ var data_full = `{
                     "1_turret_02_batch_0.obj"],
                 "textures":{
                     "Default":{"file":"Conqueror.png", "params":""},
-                    "Christmas 1":{"file":"common_01.mali.png", "params":"parameters"},
-                    "Christmas 2":{"file":"common_02.mali.png", "params":"parameters"}
+                    "Christmas 1":{"file":"common_01.mali.png", "params":"repeat"},
+                    "Christmas 2":{"file":"common_02.mali.png", "params":"repeat"}
                 }},
             "tracks":{
                 "mesh":[
@@ -312,7 +312,7 @@ var data_full = `{
 "1_turret_01_batch_0.obj"
                 ],
                 "textures":{
-                    "Default":{"file":"DickerMax.mali.png", "params":""}
+                    "Default":{"file":"DickerMax.mali.png", "params":"flip"}
                 }},
             "tracks":{
                 "mesh":[
