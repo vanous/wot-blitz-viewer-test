@@ -340,11 +340,11 @@ var data_full=`{
                     },
                     "common 01": {
                         "file": "common_01.mali.png",
-                        "params": ""
+                        "params": "repeat"
                     },
                     "common 02": {
                         "file": "common_02.mali.png",
-                        "params": ""
+                        "params": "repeat"
                     }
                 }
             },
@@ -412,7 +412,7 @@ var data_full=`{
                 "textures": {
                     "Default": {
                         "file": "DickerMax.mali.png",
-                        "params": ""
+                        "params": "flip"
                     },
                     "DickerMax CM": {
                         "file": "DickerMax_CM.mali.png",
