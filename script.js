@@ -49,44 +49,37 @@ scene.add(backLight);
 
 head_elements=[];
 function head_texture(textr){
-
-obj.Wireframe=false;
-
-var loader = new THREE.ImageLoader();
-loader.setPath(selected_tank.path_textures);
-texture_head = new THREE.Texture();
-loader.load(textr.file, function(image) {
-if (textr.params=="flip"){
-    texture_head.wrapT = THREE.RepeatWrapping;
-    texture_head.repeat.y = - 1;
-	}else if (textr.params=="repeat"){
-    
+    obj.Wireframe=false;
+    var loader = new THREE.ImageLoader();
+    loader.setPath(selected_tank.path_textures);
+    texture_head = new THREE.Texture();
+    loader.load(textr.file, function(image) {
+        console.log(textr);
+        if (textr.params=="flip"){
+                texture_head.wrapT = THREE.RepeatWrapping;
+                texture_head.repeat.y = - 1;
+            }else if (textr.params=="repeat"){
     texture_head.wrapT=texture_head.wrapS=THREE.RepeatWrapping;
-    texture_head.offset.set(0,0);
-    texture_head.repeat.set(2,2);
-    
-    }else{
-    
-    
-    }
+                texture_head.offset.set(0,0);
+                texture_head.repeat.set(2,2);
+            }else{
+            }
 
+      texture_head.image = image;
+      texture_head.needsUpdate = true;
+        } );
 
+        material = new THREE.MeshPhongMaterial();
 
-    
-
-  texture_head.image = image;
-  texture_head.needsUpdate = true;
-} );
-
-
-    material = new THREE.MeshPhongMaterial();
-
-    for (var i = 0; i < head_elements.length; i++) {
-    
-        head_elements[i].material = material
-        head_elements[i].material.map = texture_head;
-    }
+        for (var i = 0; i < head_elements.length; i++) {
+        
+            head_elements[i].material = material
+            head_elements[i].material.map = texture_head;
+        }
 };
+
+
+
 function track_texture(_file){
 var loader = new THREE.ImageLoader();
 loader.setPath(selected_tank.path_textures);
@@ -109,11 +102,11 @@ loader.load(_file, function ( object ) {
     //if ( child instanceof THREE.Mesh ) {
     //  child.material.map = texture_head;
     //}
-    scene.add( object );
     head_elements.push(child)
 
     //object.position.y -= 60;
   });
+    scene.add( object );
 });
 };
 
@@ -126,9 +119,9 @@ loader.load(_file, function ( object ) {
     if ( child instanceof THREE.Mesh ) {
       child.material.map = texture_tracks;
     }
-    scene.add( object );
     //object.position.y -= 60;
   });
+    scene.add( object );
 });
 };
 
@@ -172,16 +165,6 @@ gui.add(obj, 'Wireframe').listen().onChange(function(value ){
 });
 
 
-//f1.open();
-//obj.test=true;
-
-//var f2 = gui.addFolder('Nations');
-
-//f2.add(obj, 'test').onChange(function(value ){
-//if (value){
-//}else{
-//};
-//});
 
 function clearScene(){
     for( var i = scene.children.length - 1; i >= 3; i--) { 
@@ -189,6 +172,9 @@ function clearScene(){
          scene.remove(obj);
     }
 };
+
+
+
 
 function add_tank(){
 
@@ -200,17 +186,16 @@ selected_tank.head.mesh.forEach(function(entry) {
 
 track_texture(selected_tank.tracks.textures.default);
 
-textr=selected_tank.head.textures.Default;
-console.log("head texture: ",textr);
-head_texture(textr);
 
 selected_tank.tracks.mesh.forEach(function(entry) {
     console.log("track obj: ", entry);
     tracks(entry);
 });
 
-
 };
+
+//head_texture(selected_tank.head.textures.Default);
+
 json = JSON.parse(data);
 json_full = JSON.parse(data_full);
 selected_tank="";
@@ -249,7 +234,7 @@ head_texture(textr);
 };
 
 selected_tank=json_full.Tanks["Conqueror"];
-selected_tank=json_full.Tanks["Dicker Max"];
+//selected_tank=json_full.Tanks["Dicker Max"];
 add_tank();
 
 var animate = function () {
