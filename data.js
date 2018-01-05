@@ -1,7 +1,6 @@
 var data=`{
     "Skins": {
         "A-20": [
-            "A-20 mtr NM",
             "A-20 mtr",
             "A-20 CM"
         ],
@@ -11,8 +10,7 @@ var data=`{
         "AMX Dracula": [
             "AMX Dracula CM",
             "Default",
-            "AMX Dracula Skinned",
-            "AMX Dracula NM"
+            "AMX Dracula Skinned"
         ],
         "BT 7A": [
             "BT-7A",
@@ -39,9 +37,9 @@ var data=`{
             "Default"
         ],
         "Conqueror": [
-            "common 02",
+            "Christmas1",
             "Conqueror2",
-            "common 01",
+            "Christmas2",
             "T-34-85 chassis 01 AM",
             "Conquerorbup",
             "Default"
@@ -52,23 +50,22 @@ var data=`{
         ],
         "DickerMax": [
             "DickerMax CM",
-            "Default",
-            "DickerMax NM"
+            "Default"
         ],
         "Ferdinand": [
-            "Default",
-            "GuP Ferdinand"
+            "Ferdinand CM",
+            "GuP Ferdinand",
+            "Default"
         ],
         "Grille 15 L63": [
             "Grille 15 L63 CM",
-            "Grille 15 L63 NM",
             "Grille 15 skin",
             "Grille 15 L63 D"
         ],
         "Ha Go": [
+            "GuP Ha Go",
             "Ha Go GuP",
-            "Default",
-            "GuP Ha Go"
+            "Default"
         ],
         "Hetzer": [
             "Default",
@@ -92,9 +89,7 @@ var data=`{
             "IS-3 auto",
             "IS-3 skin"
         ],
-        "IS-3 LM": [],
         "Indien Panzer": [
-            "Indien Pz NM",
             "Indien Pz",
             "Indien Panzer CM"
         ],
@@ -103,12 +98,12 @@ var data=`{
             "GuP JagdPanther"
         ],
         "JagdPzIV": [
-            "Default",
-            "GuP JagdPzIV"
+            "GuP JagdPzIV",
+            "Default"
         ],
         "JagdTiger": [
-            "Default",
-            "GuP JagdTiger"
+            "GuP JagdTiger",
+            "Default"
         ],
         "KV2": [
             "Default",
@@ -143,8 +138,8 @@ var data=`{
             "GuP Matilda"
         ],
         "Maus": [
-            "Default",
-            "GuP Maus"
+            "GuP Maus",
+            "Default"
         ],
         "Pz II AusfG": [
             "Default"
@@ -154,14 +149,14 @@ var data=`{
             "Default"
         ],
         "PzII J": [
-            "PzII J NM",
             "Default",
             "PzII J CM"
         ],
         "PzVI Tiger I": [
             "PzVI tiger I",
             "GuP PzVI tiger I",
-            "Tiger I GuP"
+            "Tiger I GuP",
+            "PzVI Tiger Gamescom event"
         ],
         "PzVI Tiger P": [
             "Default",
@@ -237,7 +232,6 @@ var data=`{
         "A-20",
         "RenaultFT",
         "Pz IV AusfD",
-        "IS-3 LM",
         "BT 7A",
         "Grille 15 L63",
         "T-34-85 Victory",
@@ -280,7 +274,6 @@ var data_full=`{
         "A-20": {
             "head": {
                 "mesh": [
-                    "1_HP_gui_batch_0.obj",
                     "1_gun_06_batch_1.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
                     "1_chassis_wheel_L_04_batch_0.obj",
@@ -324,7 +317,7 @@ var data_full=`{
                         "file": "A-20_mtr.mali.png",
                         "params": ""
                     },
-                    "A-20 mtr NM": {
+                    "mask": {
                         "file": "A-20_mtr_NM.mali.png",
                         "params": ""
                     }
@@ -355,7 +348,6 @@ var data_full=`{
         "AMX 50 100": {
             "head": {
                 "mesh": [
-                    "1_HP_gui_batch_0.obj",
                     "1_chassis_wheel_L_15_batch_0.obj",
                     "1_chassis_wheel_R_16_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
@@ -403,6 +395,10 @@ var data_full=`{
                     "Default": {
                         "file": "AMX_50_100.mali.png",
                         "params": ""
+                    },
+                    "mask": {
+                        "file": "AMX_50_100_NM.mali.png",
+                        "params": ""
                     }
                 }
             },
@@ -431,7 +427,6 @@ var data_full=`{
         "AMX Dracula": {
             "head": {
                 "mesh": [
-                    "1_HP_gui_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
                     "1_chassis_wheel_L_04_batch_0.obj",
                     "1_chassis_wheel_L_01_batch_0.obj",
@@ -464,16 +459,16 @@ var data_full=`{
                         "file": "AMX_Dracula_CM.mali.png",
                         "params": ""
                     },
-                    "AMX Dracula NM": {
-                        "file": "AMX_Dracula_NM.mali.png",
-                        "params": ""
-                    },
                     "AMX Dracula Skinned": {
                         "file": "AMX_Dracula_Skinned.mali.png",
                         "params": ""
                     },
                     "Default": {
                         "file": "AMX_Dracula.mali.png",
+                        "params": ""
+                    },
+                    "mask": {
+                        "file": "AMX_Dracula_NM.mali.png",
                         "params": ""
                     }
                 }
@@ -502,7 +497,6 @@ var data_full=`{
         "BT 7A": {
             "head": {
                 "mesh": [
-                    "1_HP_gui_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
                     "1_chassis_wheel_L_04_batch_0.obj",
                     "1_chassis_wheel_L_01_batch_0.obj",
@@ -529,6 +523,10 @@ var data_full=`{
                     },
                     "GuP BT-7A": {
                         "file": "GuP_BT-7A.mali.png",
+                        "params": ""
+                    },
+                    "mask": {
+                        "file": "BT-7A_NM.mali.png",
                         "params": ""
                     }
                 }
@@ -559,7 +557,6 @@ var data_full=`{
             "head": {
                 "mesh": [
                     "1_turret_02_batch_0.obj",
-                    "1_HP_gui_batch_0.obj",
                     "1_HP_gunFire_04_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
                     "1_chassis_wheel_L_12_batch_0.obj",
@@ -613,6 +610,10 @@ var data_full=`{
                     "GuP Centurion crash": {
                         "file": "GuP_Centurion_crash.mali.png",
                         "params": ""
+                    },
+                    "mask": {
+                        "file": "Centurion_NM.mali.png",
+                        "params": ""
                     }
                 }
             },
@@ -642,7 +643,6 @@ var data_full=`{
             "head": {
                 "mesh": [
                     "1_turret_02_batch_0.obj",
-                    "1_HP_gui_batch_0.obj",
                     "1_HP_gunFire_04_batch_0.obj",
                     "1_gun_03_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
@@ -692,6 +692,10 @@ var data_full=`{
                     "GuP Chi Ha": {
                         "file": "GuP_Chi_Ha.mali.png",
                         "params": ""
+                    },
+                    "mask": {
+                        "file": "Chi_Ha_NM.mali.png",
+                        "params": ""
                     }
                 }
             },
@@ -719,7 +723,6 @@ var data_full=`{
             "head": {
                 "mesh": [
                     "1_turret_02_batch_0.obj",
-                    "1_HP_gui_batch_0.obj",
                     "1_HP_gunFire_04_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
                     "1_chassis_wheel_L_04_batch_0.obj",
@@ -767,6 +770,10 @@ var data_full=`{
                     "GuP Chi Nu": {
                         "file": "GuP_Chi_Nu.mali.png",
                         "params": ""
+                    },
+                    "mask": {
+                        "file": "Chi_Ni_NM.mali.png",
+                        "params": ""
                     }
                 }
             },
@@ -794,7 +801,6 @@ var data_full=`{
             "head": {
                 "mesh": [
                     "1_turret_02_batch_0.obj",
-                    "1_HP_gui_batch_0.obj",
                     "1_gun_08_batch_0.obj",
                     "1_gun_03_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
@@ -852,6 +858,10 @@ var data_full=`{
                     "GuP Churchill VII": {
                         "file": "GuP_Churchill_VII.mali.png",
                         "params": ""
+                    },
+                    "mask": {
+                        "file": "Churchill_VII_NM.mali.png",
+                        "params": ""
                     }
                 }
             },
@@ -881,7 +891,6 @@ var data_full=`{
             "head": {
                 "mesh": [
                     "1_turret_02_batch_0.obj",
-                    "1_HP_gui_batch_0.obj",
                     "1_gun_08_batch_0.obj",
                     "1_HP_gunFire_04_batch_0.obj",
                     "1_gun_03_batch_0.obj",
@@ -927,6 +936,10 @@ var data_full=`{
                     "Default": {
                         "file": "Comet.mali.png",
                         "params": ""
+                    },
+                    "mask": {
+                        "file": "Comet_NM.mali.png",
+                        "params": ""
                     }
                 }
             },
@@ -956,7 +969,6 @@ var data_full=`{
             "head": {
                 "mesh": [
                     "1_turret_02_batch_0.obj",
-                    "1_HP_gui_batch_0.obj",
                     "1_gun_03_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
                     "1_chassis_wheel_L_04_batch_0.obj",
@@ -994,6 +1006,14 @@ var data_full=`{
                     "1_chassis_wheel_L_08_batch_0.obj"
                 ],
                 "textures": {
+                    "Christmas1": {
+                        "file": "Christmas1_repeat.mali.png",
+                        "params": "repeat"
+                    },
+                    "Christmas2": {
+                        "file": "Christmas2_repeat.mali.png",
+                        "params": "repeat"
+                    },
                     "Conqueror2": {
                         "file": "Conqueror2.png",
                         "params": ""
@@ -1010,13 +1030,9 @@ var data_full=`{
                         "file": "T-34-85_chassis_01_AM.mali.png",
                         "params": ""
                     },
-                    "common 01": {
-                        "file": "common_01.mali.png",
-                        "params": "repeat"
-                    },
-                    "common 02": {
-                        "file": "common_02.mali.png",
-                        "params": "repeat"
+                    "mask": {
+                        "file": "Conqueror_NM.mali.png",
+                        "params": ""
                     }
                 }
             },
@@ -1046,7 +1062,6 @@ var data_full=`{
             "head": {
                 "mesh": [
                     "1_turret_02_batch_0.obj",
-                    "1_HP_gui_batch_0.obj",
                     "1_HP_gunFire_04_batch_0.obj",
                     "1_gun_03_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
@@ -1086,6 +1101,10 @@ var data_full=`{
                     "GuP Crusader": {
                         "file": "GuP_Crusader.mali.png",
                         "params": ""
+                    },
+                    "mask": {
+                        "file": "Crusader_NM.mali.png",
+                        "params": ""
                     }
                 }
             },
@@ -1114,7 +1133,6 @@ var data_full=`{
         "DickerMax": {
             "head": {
                 "mesh": [
-                    "1_HP_gui_batch_0.obj",
                     "1_gun_03_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
                     "1_chassis_wheel_L_12_batch_0.obj",
@@ -1152,14 +1170,14 @@ var data_full=`{
                 ],
                 "textures": {
                     "Default": {
-                        "file": "DickerMax.mali.png",
+                        "file": "DickerMax_flip.mali.png",
                         "params": "flip"
                     },
                     "DickerMax CM": {
                         "file": "DickerMax_CM.mali.png",
                         "params": ""
                     },
-                    "DickerMax NM": {
+                    "mask": {
                         "file": "DickerMax_NM.mali.png",
                         "params": ""
                     }
@@ -1188,7 +1206,6 @@ var data_full=`{
         "Ferdinand": {
             "head": {
                 "mesh": [
-                    "1_HP_gui_batch_0.obj",
                     "1_gun_03_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
                     "1_chassis_wheel_L_04_batch_0.obj",
@@ -1217,11 +1234,19 @@ var data_full=`{
                 ],
                 "textures": {
                     "Default": {
-                        "file": "Ferdinand.mali.png",
+                        "file": "Ferdinand_flip.mali.png",
                         "params": "flip"
+                    },
+                    "Ferdinand CM": {
+                        "file": "Ferdinand_CM.mali.png",
+                        "params": ""
                     },
                     "GuP Ferdinand": {
                         "file": "GuP_Ferdinand.mali.png",
+                        "params": ""
+                    },
+                    "mask": {
+                        "file": "Ferdinand_NM.mali.png",
                         "params": ""
                     }
                 }
@@ -1249,7 +1274,6 @@ var data_full=`{
         "Grille 15 L63": {
             "head": {
                 "mesh": [
-                    "1_HP_gui_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
                     "1_chassis_wheel_L_04_batch_0.obj",
                     "1_chassis_wheel_L_01_batch_0.obj",
@@ -1286,12 +1310,12 @@ var data_full=`{
                         "file": "Grille_15_L63_D.mali.png",
                         "params": ""
                     },
-                    "Grille 15 L63 NM": {
-                        "file": "Grille_15_L63_NM.mali.png",
-                        "params": ""
-                    },
                     "Grille 15 skin": {
                         "file": "Grille_15_skin.mali.png",
+                        "params": ""
+                    },
+                    "mask": {
+                        "file": "Grille_15_L63_NM.mali.png",
                         "params": ""
                     }
                 }
@@ -1320,7 +1344,6 @@ var data_full=`{
             "head": {
                 "mesh": [
                     "1_turret_02_batch_0.obj",
-                    "1_HP_gui_batch_0.obj",
                     "1_gun_08_batch_0.obj",
                     "1_gun_03_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
@@ -1362,6 +1385,10 @@ var data_full=`{
                     "Ha Go GuP": {
                         "file": "Ha_Go_GuP.mali.png",
                         "params": ""
+                    },
+                    "mask": {
+                        "file": "Ha_Go_NM.mali.png",
+                        "params": ""
                     }
                 }
             },
@@ -1389,7 +1416,6 @@ var data_full=`{
         "Hetzer": {
             "head": {
                 "mesh": [
-                    "1_HP_gui_batch_0.obj",
                     "1_HP_gunFire_04_batch_0.obj",
                     "1_gun_03_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
@@ -1426,6 +1452,10 @@ var data_full=`{
                     "Hetzer GuP": {
                         "file": "Hetzer_GuP.mali.png",
                         "params": ""
+                    },
+                    "mask": {
+                        "file": "Hetzer_NM.mali.png",
+                        "params": ""
                     }
                 }
             },
@@ -1452,7 +1482,6 @@ var data_full=`{
         "IS": {
             "head": {
                 "mesh": [
-                    "1_HP_gui_batch_0.obj",
                     "1_HP_gunFire_04_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
                     "1_chassis_wheel_L_04_batch_0.obj",
@@ -1497,6 +1526,10 @@ var data_full=`{
                     "GuP IS": {
                         "file": "GuP_IS.mali.png",
                         "params": ""
+                    },
+                    "mask": {
+                        "file": "IS_NM.mali.png",
+                        "params": ""
                     }
                 }
             },
@@ -1523,7 +1556,6 @@ var data_full=`{
         "IS 2 Berlin": {
             "head": {
                 "mesh": [
-                    "1_HP_gui_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
                     "1_chassis_wheel_L_04_batch_0.obj",
                     "1_chassis_wheel_L_01_batch_0.obj",
@@ -1565,6 +1597,10 @@ var data_full=`{
                     "IS-2 Berlin": {
                         "file": "IS-2_Berlin.mali.png",
                         "params": ""
+                    },
+                    "mask": {
+                        "file": "IS-2_Berlin_NM.mali.png",
+                        "params": ""
                     }
                 }
             },
@@ -1593,7 +1629,6 @@ var data_full=`{
         "IS-3": {
             "head": {
                 "mesh": [
-                    "1_HP_gui_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
                     "1_chassis_wheel_L_04_batch_0.obj",
                     "1_chassis_wheel_L_01_batch_0.obj",
@@ -1652,6 +1687,10 @@ var data_full=`{
                     "IS-3 turret 02 skin": {
                         "file": "IS-3_turret_02_skin.mali.png",
                         "params": ""
+                    },
+                    "mask": {
+                        "file": "IS-3_NM.mali.png",
+                        "params": ""
                     }
                 }
             },
@@ -1675,65 +1714,10 @@ var data_full=`{
                 }
             }
         },
-        "IS-3 LM": {
-            "head": {
-                "mesh": [
-                    "1_HP_gui_batch_0.obj",
-                    "1_chassis_wheel_R_05_batch_0.obj",
-                    "1_chassis_wheel_L_04_batch_0.obj",
-                    "1_hull_batch_0.obj",
-                    "1_chassis_wheel_L_01_batch_0.obj",
-                    "1_HP_Fire_02_batch_0.obj",
-                    "1_chassis_wheel_R_06_batch_0.obj",
-                    "1_turret_01_batch_0.obj",
-                    "1_chassis_wheel_L_03_batch_0.obj",
-                    "1_chassis_wheel_L_02_batch_0.obj",
-                    "1_HP_gunFire_01_batch_0.obj",
-                    "1_HP_Fire_01_batch_0.obj",
-                    "1_gun_01_batch_0.obj",
-                    "1_chassis_wheel_L_07_batch_0.obj",
-                    "1_chassis_wheel_L_05_batch_0.obj",
-                    "1_chassis_wheel_R_08_batch_0.obj",
-                    "1_chassis_wheel_R_07_batch_0.obj",
-                    "1_chassis_wheel_R_01_batch_0.obj",
-                    "1_chassis_wheel_R_02_batch_0.obj",
-                    "1_chassis_wheel_R_11_batch_0.obj",
-                    "1_chassis_wheel_R_10_batch_0.obj",
-                    "1_chassis_wheel_L_11_batch_0.obj",
-                    "1_chassis_wheel_L_06_batch_0.obj",
-                    "1_chassis_wheel_R_04_batch_0.obj",
-                    "1_chassis_wheel_R_09_batch_0.obj",
-                    "1_chassis_wheel_L_10_batch_0.obj",
-                    "1_chassis_wheel_R_03_batch_0.obj",
-                    "1_chassis_wheel_L_09_batch_0.obj",
-                    "1_chassis_wheel_L_08_batch_0.obj"
-                ],
-                "textures": {}
-            },
-            "path_meshes": "IS-3_LM.sc2_meshes/",
-            "path_textures": "IS-3_LM.sc2_textures/",
-            "tracks": {
-                "mesh": [
-                    "1_HP_TrackUp_LFront_batch_0.obj",
-                    "1_HP_TrackUp_LRear_batch_0.obj",
-                    "1_HP_TrackUp_RFront_batch_0.obj",
-                    "1_HP_Track_RFront_batch_0.obj",
-                    "1_HP_Track_Exhaus_01_batch_0.obj",
-                    "1_chassis_track_L_batch_0.obj",
-                    "1_HP_Track_LRear_batch_0.obj",
-                    "1_HP_TrackUp_RRear_batch_0.obj",
-                    "1_chassis_track_R_batch_0.obj",
-                    "1_HP_Track_RRear_batch_0.obj",
-                    "1_HP_Track_LFront_batch_0.obj"
-                ],
-                "textures": {}
-            }
-        },
         "Indien Panzer": {
             "head": {
                 "mesh": [
                     "1_turret_02_batch_0.obj",
-                    "1_HP_gui_batch_0.obj",
                     "1_HP_gunFire_04_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
                     "1_chassis_wheel_L_04_batch_0.obj",
@@ -1768,7 +1752,7 @@ var data_full=`{
                         "file": "Indien_Pz.mali.png",
                         "params": ""
                     },
-                    "Indien Pz NM": {
+                    "mask": {
                         "file": "Indien_Pz_NM.mali.png",
                         "params": ""
                     }
@@ -1797,7 +1781,6 @@ var data_full=`{
         "JagdPanther": {
             "head": {
                 "mesh": [
-                    "1_HP_gui_batch_0.obj",
                     "1_HP_gunFire_04_batch_0.obj",
                     "1_gun_03_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
@@ -1838,6 +1821,10 @@ var data_full=`{
                     "GuP JagdPanther": {
                         "file": "GuP_JagdPanther.mali.png",
                         "params": ""
+                    },
+                    "mask": {
+                        "file": "JagdPanther_NM.mali.png",
+                        "params": ""
                     }
                 }
             },
@@ -1862,7 +1849,6 @@ var data_full=`{
         "JagdPzIV": {
             "head": {
                 "mesh": [
-                    "1_HP_gui_batch_0.obj",
                     "1_HP_gunFire_04_batch_0.obj",
                     "1_gun_03_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
@@ -1904,10 +1890,14 @@ var data_full=`{
                 "textures": {
                     "Default": {
                         "file": "JagdPzIV.mali.png",
-                        "params": "flip"
+                        "params": ""
                     },
                     "GuP JagdPzIV": {
-                        "file": "GuP_JagdPzIV.mali.png",
+                        "file": "GuP_JagdPzIV_flip.mali.png",
+                        "params": "flip"
+                    },
+                    "mask": {
+                        "file": "JagdPzIV_NM.mali.png",
                         "params": ""
                     }
                 }
@@ -1933,7 +1923,6 @@ var data_full=`{
         "JagdTiger": {
             "head": {
                 "mesh": [
-                    "1_HP_gui_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
                     "1_chassis_wheel_L_04_batch_0.obj",
                     "1_hull_batch_0.obj",
@@ -1966,11 +1955,15 @@ var data_full=`{
                 ],
                 "textures": {
                     "Default": {
-                        "file": "JagdTiger.mali.png",
+                        "file": "JagdTiger_flip.mali.png",
                         "params": "flip"
                     },
                     "GuP JagdTiger": {
                         "file": "GuP_JagdTiger.mali.png",
+                        "params": ""
+                    },
+                    "mask": {
+                        "file": "JagdTiger_NM.mali.png",
                         "params": ""
                     }
                 }
@@ -1997,7 +1990,6 @@ var data_full=`{
             "head": {
                 "mesh": [
                     "1_turret_02_batch_0.obj",
-                    "1_HP_gui_batch_0.obj",
                     "1_HP_gunFire_04_batch_0.obj",
                     "1_gun_03_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
@@ -2048,6 +2040,10 @@ var data_full=`{
                     "GuP KV2": {
                         "file": "GuP_KV2.mali.png",
                         "params": ""
+                    },
+                    "mask": {
+                        "file": "KV2_NM.mali.png",
+                        "params": ""
                     }
                 }
             },
@@ -2074,7 +2070,6 @@ var data_full=`{
         "M24 Chaffee": {
             "head": {
                 "mesh": [
-                    "1_HP_gui_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
                     "1_chassis_wheel_L_04_batch_0.obj",
                     "1_chassis_wheel_L_01_batch_0.obj",
@@ -2115,6 +2110,10 @@ var data_full=`{
                     "GuP M24 Chaffee": {
                         "file": "GuP_M24_Chaffee.mali.png",
                         "params": ""
+                    },
+                    "mask": {
+                        "file": "M24_Chaffee_NM.mali.png",
+                        "params": ""
                     }
                 }
             },
@@ -2142,7 +2141,6 @@ var data_full=`{
             "head": {
                 "mesh": [
                     "1_turret_02_batch_0.obj",
-                    "1_HP_gui_batch_0.obj",
                     "1_gun_08_batch_0.obj",
                     "1_HP_gunFire_04_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
@@ -2208,6 +2206,10 @@ var data_full=`{
                     "M26 Pershing turret 02": {
                         "file": "M26_Pershing_turret_02.mali.png",
                         "params": ""
+                    },
+                    "mask": {
+                        "file": "M26_Pershing_NM.mali.png",
+                        "params": ""
                     }
                 }
             },
@@ -2232,7 +2234,6 @@ var data_full=`{
         "M3 Lee": {
             "head": {
                 "mesh": [
-                    "1_HP_gui_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
                     "1_chassis_wheel_L_04_batch_0.obj",
                     "1_hull_batch_0.obj",
@@ -2272,6 +2273,10 @@ var data_full=`{
                     "GuP M3 Lee": {
                         "file": "GuP_M3_Lee.mali.png",
                         "params": ""
+                    },
+                    "mask": {
+                        "file": "M3_Lee_NM.mali.png",
+                        "params": ""
                     }
                 }
             },
@@ -2297,7 +2302,6 @@ var data_full=`{
             "head": {
                 "mesh": [
                     "1_turret_02_batch_0.obj",
-                    "1_HP_gui_batch_0.obj",
                     "1_HP_gunFire_04_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
                     "1_chassis_wheel_L_04_batch_0.obj",
@@ -2343,6 +2347,10 @@ var data_full=`{
                     "GuP M4 Sherman": {
                         "file": "GuP_M4_Sherman.mali.png",
                         "params": ""
+                    },
+                    "mask": {
+                        "file": "M4_Sherman_NM.mali.png",
+                        "params": ""
                     }
                 }
             },
@@ -2368,7 +2376,6 @@ var data_full=`{
             "head": {
                 "mesh": [
                     "1_turret_02_batch_0.obj",
-                    "1_HP_gui_batch_0.obj",
                     "1_HP_gunFire_04_batch_0.obj",
                     "1_gun_03_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
@@ -2430,6 +2437,10 @@ var data_full=`{
                     "M4A3E8 sherman skin": {
                         "file": "M4A3E8_sherman_skin.mali.png",
                         "params": ""
+                    },
+                    "mask": {
+                        "file": "M4A3_Sherman_NM.mali.png",
+                        "params": ""
                     }
                 }
             },
@@ -2457,7 +2468,6 @@ var data_full=`{
             "head": {
                 "mesh": [
                     "1_turret_02_batch_0.obj",
-                    "1_HP_gui_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
                     "1_chassis_wheel_L_12_batch_0.obj",
                     "1_HP_turretJoint_batch_0.obj",
@@ -2504,6 +2514,10 @@ var data_full=`{
                     "GuP Matilda": {
                         "file": "GuP_Matilda.mali.png",
                         "params": ""
+                    },
+                    "mask": {
+                        "file": "Matilda_NM.mali.png",
+                        "params": ""
                     }
                 }
             },
@@ -2532,7 +2546,6 @@ var data_full=`{
         "Maus": {
             "head": {
                 "mesh": [
-                    "1_HP_gui_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
                     "1_chassis_wheel_L_12_batch_0.obj",
                     "1_chassis_wheel_L_04_batch_0.obj",
@@ -2570,11 +2583,15 @@ var data_full=`{
                 ],
                 "textures": {
                     "Default": {
-                        "file": "Maus.mali.png",
+                        "file": "Maus_flip.mali.png",
                         "params": "flip"
                     },
                     "GuP Maus": {
                         "file": "GuP_Maus.mali.png",
+                        "params": ""
+                    },
+                    "mask": {
+                        "file": "Maus_NM.mali.png",
                         "params": ""
                     }
                 }
@@ -2605,7 +2622,6 @@ var data_full=`{
             "head": {
                 "mesh": [
                     "1_turret_02_batch_0.obj",
-                    "1_HP_gui_batch_0.obj",
                     "1_HP_gunFire_04_batch_0.obj",
                     "1_gun_03_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
@@ -2638,7 +2654,11 @@ var data_full=`{
                 "textures": {
                     "Default": {
                         "file": "Pz_II_AusfG.mali.png",
-                        "params": "flip"
+                        "params": ""
+                    },
+                    "mask": {
+                        "file": "Pz_II_AusfG_NM.mali.png",
+                        "params": ""
                     }
                 }
             },
@@ -2667,7 +2687,6 @@ var data_full=`{
             "head": {
                 "mesh": [
                     "1_turret_02_batch_0.obj",
-                    "1_HP_gui_batch_0.obj",
                     "1_HP_gunFire_04_batch_0.obj",
                     "1_gun_03_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
@@ -2718,10 +2737,14 @@ var data_full=`{
                 "textures": {
                     "Default": {
                         "file": "Pz_IV_AusfD.mali.png",
-                        "params": "flip"
+                        "params": ""
                     },
                     "GuP Pz IV AusfD": {
                         "file": "GuP_Pz_IV_AusfD.mali.png",
+                        "params": ""
+                    },
+                    "mask": {
+                        "file": "Pz_IV_AusfD_NM.mali.png",
                         "params": ""
                     }
                 }
@@ -2750,7 +2773,6 @@ var data_full=`{
         "PzII J": {
             "head": {
                 "mesh": [
-                    "1_HP_gui_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
                     "1_chassis_wheel_L_04_batch_0.obj",
                     "1_hull_batch_0.obj",
@@ -2774,14 +2796,14 @@ var data_full=`{
                 ],
                 "textures": {
                     "Default": {
-                        "file": "PzII_J.mali.png",
-                        "params": ""
+                        "file": "PzII_J_flip.mali.png",
+                        "params": "flip"
                     },
                     "PzII J CM": {
                         "file": "PzII_J_CM.mali.png",
                         "params": ""
                     },
-                    "PzII J NM": {
+                    "mask": {
                         "file": "PzII_J_NM.mali.png",
                         "params": ""
                     }
@@ -2809,7 +2831,6 @@ var data_full=`{
             "head": {
                 "mesh": [
                     "1_turret_02_batch_0.obj",
-                    "1_HP_gui_batch_0.obj",
                     "1_HP_gunFire_04_batch_0.obj",
                     "1_gun_03_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
@@ -2853,12 +2874,20 @@ var data_full=`{
                         "file": "GuP_PzVI_tiger_I.mali.png",
                         "params": ""
                     },
+                    "PzVI Tiger Gamescom event": {
+                        "file": "PzVI_Tiger_Gamescom_event.mali.png",
+                        "params": ""
+                    },
                     "PzVI tiger I": {
                         "file": "PzVI_tiger_I.mali.png",
                         "params": ""
                     },
                     "Tiger I GuP": {
                         "file": "Tiger_I_GuP.mali.png",
+                        "params": ""
+                    },
+                    "mask": {
+                        "file": "PzVl_Tiger_I_NM.mali.png",
                         "params": ""
                     }
                 }
@@ -2887,7 +2916,6 @@ var data_full=`{
             "head": {
                 "mesh": [
                     "1_turret_02_batch_0.obj",
-                    "1_HP_gui_batch_0.obj",
                     "1_gun_03_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
                     "1_chassis_wheel_L_04_batch_0.obj",
@@ -2919,11 +2947,15 @@ var data_full=`{
                 ],
                 "textures": {
                     "Default": {
-                        "file": "PzVI_Tiger_P.mali.png",
+                        "file": "PzVI_Tiger_P_flip.mali.png",
                         "params": "flip"
                     },
                     "GuP PzVI Tiger P": {
                         "file": "GuP_PzVI_Tiger_P.mali.png",
+                        "params": ""
+                    },
+                    "mask": {
+                        "file": "PzVI_Tiger_P_NM.mali.png",
                         "params": ""
                     }
                 }
@@ -2952,7 +2984,6 @@ var data_full=`{
             "head": {
                 "mesh": [
                     "1_turret_02_batch_0.obj",
-                    "1_HP_gui_batch_0.obj",
                     "1_gun_08_batch_0.obj",
                     "1_HP_gunFire_04_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
@@ -2994,11 +3025,15 @@ var data_full=`{
                 ],
                 "textures": {
                     "Default": {
-                        "file": "PzVIB_Tiger_II.mali.png",
+                        "file": "PzVIB_Tiger_II_flip.mali.png",
                         "params": "flip"
                     },
                     "GuP PzVIB Tiger II": {
                         "file": "GuP_PzVIB_Tiger_II.mali.png",
+                        "params": ""
+                    },
+                    "mask": {
+                        "file": "PzVIB_Tiger_II_NM.mali.png",
                         "params": ""
                     }
                 }
@@ -3026,7 +3061,6 @@ var data_full=`{
         "RenaultFT": {
             "head": {
                 "mesh": [
-                    "1_HP_gui_batch_0.obj",
                     "1_HP_gunFire_04_batch_0.obj",
                     "1_chassis_wheel_L_15_batch_0.obj",
                     "1_chassis_wheel_R_16_batch_0.obj",
@@ -3085,6 +3119,10 @@ var data_full=`{
                     "GuP RenaultFT": {
                         "file": "GuP_RenaultFT.mali.png",
                         "params": ""
+                    },
+                    "mask": {
+                        "file": "RenaultFT_NM.mali.png",
+                        "params": ""
                     }
                 }
             },
@@ -3112,7 +3150,6 @@ var data_full=`{
         "Stug III": {
             "head": {
                 "mesh": [
-                    "1_HP_gui_batch_0.obj",
                     "1_HP_gunFire_04_batch_0.obj",
                     "1_gun_06_batch_1.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
@@ -3155,6 +3192,10 @@ var data_full=`{
                     "GuP Stug III": {
                         "file": "GuP_Stug_III.mali.png",
                         "params": ""
+                    },
+                    "mask": {
+                        "file": "Stug_III_NM.mali.png",
+                        "params": ""
                     }
                 }
             },
@@ -3182,7 +3223,6 @@ var data_full=`{
             "head": {
                 "mesh": [
                     "1_turret_02_batch_0.obj",
-                    "1_HP_gui_batch_0.obj",
                     "1_HP_gunFire_04_batch_0.obj",
                     "1_chassis_wheel_L_15_batch_0.obj",
                     "1_gun_03_batch_0.obj",
@@ -3238,6 +3278,10 @@ var data_full=`{
                     "Default": {
                         "file": "T-28.mali.png",
                         "params": ""
+                    },
+                    "mask": {
+                        "file": "T-28_NM.mali.png",
+                        "params": ""
                     }
                 }
             },
@@ -3265,7 +3309,6 @@ var data_full=`{
             "head": {
                 "mesh": [
                     "1_turret_02_batch_0.obj",
-                    "1_HP_gui_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
                     "1_chassis_wheel_L_04_batch_0.obj",
                     "1_hull_batch_0.obj",
@@ -3311,6 +3354,10 @@ var data_full=`{
                     "GuP T-34-85": {
                         "file": "GuP_T-34-85.mali.png",
                         "params": ""
+                    },
+                    "mask": {
+                        "file": "T-34_NM.mali.png",
+                        "params": ""
                     }
                 }
             },
@@ -3340,7 +3387,6 @@ var data_full=`{
             "head": {
                 "mesh": [
                     "1_turret_02_batch_0.obj",
-                    "1_HP_gui_batch_0.obj",
                     "1_gun_03_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
                     "1_chassis_wheel_L_04_batch_0.obj",
@@ -3378,6 +3424,10 @@ var data_full=`{
                     "Default": {
                         "file": "T-34-85.mali.png",
                         "params": ""
+                    },
+                    "mask": {
+                        "file": "T-34-85_NM.mali.png",
+                        "params": ""
                     }
                 }
             },
@@ -3407,7 +3457,6 @@ var data_full=`{
             "head": {
                 "mesh": [
                     "1_turret_02_batch_0.obj",
-                    "1_HP_gui_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
                     "1_chassis_wheel_L_04_batch_0.obj",
                     "1_hull_batch_0.obj",
@@ -3431,6 +3480,10 @@ var data_full=`{
                 "textures": {
                     "Default": {
                         "file": "T-34-85_Victory.mali.png",
+                        "params": ""
+                    },
+                    "mask": {
+                        "file": "T-34-85_Victory_NM.mali.png",
                         "params": ""
                     }
                 }
@@ -3460,7 +3513,6 @@ var data_full=`{
         "T95": {
             "head": {
                 "mesh": [
-                    "1_HP_gui_batch_0.obj",
                     "1_gun_03_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
                     "1_chassis_wheel_L_04_batch_0.obj",
@@ -3502,6 +3554,10 @@ var data_full=`{
                     "GuP T95 crash": {
                         "file": "GuP_T95_crash.mali.png",
                         "params": ""
+                    },
+                    "mask": {
+                        "file": "T95_NM.mali.png",
+                        "params": ""
                     }
                 }
             },
@@ -3528,7 +3584,6 @@ var data_full=`{
         "Tetrarch LL": {
             "head": {
                 "mesh": [
-                    "1_HP_gui_batch_0.obj",
                     "1_chassis_wheel_L_04_batch_0.obj",
                     "1_chassis_wheel_L_01_batch_0.obj",
                     "1_HP_Fire_02_batch_0.obj",
@@ -3551,6 +3606,10 @@ var data_full=`{
                     },
                     "Tetrarch LL tarck": {
                         "file": "Tetrarch_LL_tarck.mali.png",
+                        "params": ""
+                    },
+                    "mask": {
+                        "file": "Tetrarch_LL_NM.mali.png",
                         "params": ""
                     }
                 }
@@ -3578,7 +3637,6 @@ var data_full=`{
         "Tiger I GuP": {
             "head": {
                 "mesh": [
-                    "1_HP_gui_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
                     "1_chassis_wheel_L_04_batch_0.obj",
                     "1_chassis_wheel_L_01_batch_0.obj",
@@ -3610,6 +3668,10 @@ var data_full=`{
                     "Default": {
                         "file": "Tiger_I_GuP.mali.png",
                         "params": ""
+                    },
+                    "mask": {
+                        "file": "Tiger_I_GuP_NM.mali.png",
+                        "params": ""
                     }
                 }
             },
@@ -3638,7 +3700,6 @@ var data_full=`{
         "Type62": {
             "head": {
                 "mesh": [
-                    "1_HP_gui_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
                     "1_chassis_wheel_L_04_batch_0.obj",
                     "1_hull_batch_0.obj",
@@ -3680,6 +3741,10 @@ var data_full=`{
                     "Type62 dragon gold": {
                         "file": "Type62_dragon_gold.mali.png",
                         "params": ""
+                    },
+                    "mask": {
+                        "file": "Type62_NM.mali.png",
+                        "params": ""
                     }
                 }
             },
@@ -3707,7 +3772,6 @@ var data_full=`{
         "Van Helsing": {
             "head": {
                 "mesh": [
-                    "1_HP_gui_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
                     "1_chassis_wheel_L_12_batch_0.obj",
                     "1_chassis_wheel_L_04_batch_0.obj",
@@ -3747,6 +3811,10 @@ var data_full=`{
                     "Default": {
                         "file": "Van_Helsing.mali.png",
                         "params": ""
+                    },
+                    "mask": {
+                        "file": "Van_Helsing_NM.mali.png",
+                        "params": ""
                     }
                 }
             },
@@ -3775,7 +3843,6 @@ var data_full=`{
         "WZ-111": {
             "head": {
                 "mesh": [
-                    "1_HP_gui_batch_0.obj",
                     "1_HP_gunFire_04_batch_0.obj",
                     "1_chassis_wheel_R_05_batch_0.obj",
                     "1_chassis_wheel_L_12_batch_0.obj",
@@ -3812,6 +3879,10 @@ var data_full=`{
                 "textures": {
                     "Default": {
                         "file": "WZ-111.mali.png",
+                        "params": ""
+                    },
+                    "mask": {
+                        "file": "WZ-111_NM.mali.png",
                         "params": ""
                     }
                 }

@@ -69,13 +69,30 @@ function head_texture(textr){
       texture_head.needsUpdate = true;
         } );
 
-        material = new THREE.MeshPhongMaterial();
+//normal mask NM
+    var loaderNM = new THREE.ImageLoader();
+    loaderNM.setPath(selected_tank.path_textures);
+    texture_head_NM = new THREE.Texture();
+    loaderNM.load(selected_tank["head"]["textures"]["mask"].file, function(image) {
+        //console.log(textr);
 
+      texture_head_NM.image = image;
+      texture_head_NM.needsUpdate = true;
+        } );
+
+
+        material = new THREE.MeshPhongMaterial();
+        material.map = texture_head;
+        material.normalMap = texture_head_NM;
+        material.normalScale.set(1,2);
+        material.needsUpdate = true;
+        console.log(material);
         for (var i = 0; i < head_elements.length; i++) {
         
             head_elements[i].material = material
-            head_elements[i].material.map = texture_head;
+
         }
+    console.log("applied nm map");
 };
 
 

@@ -29,21 +29,31 @@ for d in dirs:
         files = [item.name for item in Path(d).iterdir() if item.is_file()]
         for f in files:
             if "textures" in d:
+                params=""
+                if "repeat" in f:
+                    params="repeat"
+                if "flip" in f:
+                    params="flip"
+
                 if "track" not in f.lower():
-                    if tank_name_long==f.replace(".mali.png","").replace(".png",""):
-                        skin_name="Default"
-                    else:
-                        skin_name=f.replace(".mali.png","").replace(".png","").replace("_"," ")
-                    data["Skins"][tank_name].append(skin_name)
-                    
-                    data_full["Tanks"][tank_name]["head"]["textures"][skin_name]={"file":f,"params":""}
+                    if "_NM." not in f:
+                        if tank_name_long==f.replace("_flip.mali.png","").replace(".mali.png","").replace(".png",""):
+                            skin_name="Default"
+                        else:
+                            skin_name=f.replace("_repeat.mali.png","").replace("_flip.mali.png","").replace(".mali.png","").replace(".png","").replace("_"," ")
+                        data["Skins"][tank_name].append(skin_name)
+                        data_full["Tanks"][tank_name]["head"]["textures"][skin_name]={"file":f,"params":params}
+                    else: #mask
+                        data_full["Tanks"][tank_name]["head"]["textures"]["mask"]={"file":f,"params":params}
+
                 elif "track" in f.lower():
                     #data_full["Tanks"][tank_name]["tracks"]["textures"]["default"]={"file":f,"params":""}
                     data_full["Tanks"][tank_name]["tracks"]["textures"]["default"]=f;
 
             elif "meshes" in d:
                 if "track" not in f.lower():
-                    data_full["Tanks"][tank_name]["head"]["mesh"].append(f)
+                    if "1_HP_gui_batch_0.obj" not in f:
+                        data_full["Tanks"][tank_name]["head"]["mesh"].append(f)
                 elif "track" in f.lower():
                     if "crash" not in f.lower():
                         data_full["Tanks"][tank_name]["tracks"]["mesh"].append(f)
