@@ -6,7 +6,7 @@ import json
 path="./"
 dirs = [str(item) for item in Path(path).iterdir() if item.is_dir()]
 
-data={"Skins":{},"Tanks":[]}
+data={"Skins":{},"Tanks":[""]}
 data_full={"Tanks":{}}
 
 for d in dirs:

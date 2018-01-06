@@ -116,9 +116,11 @@ var loader = new THREE.OBJLoader();
 loader.setPath(selected_tank.path_meshes);
 loader.load(_file, function ( object ) {
   object.traverse( function ( child ) {
-    //if ( child instanceof THREE.Mesh ) {
-    //  child.material.map = texture_head;
-    //}
+    if ( child instanceof THREE.Mesh ) {
+        if (typeof texture_head !== 'undefined'){
+      child.material.map = texture_head;
+        }
+    }
     head_elements.push(child)
 
     //object.position.y -= 60;
@@ -197,7 +199,7 @@ function add_tank(){
 
 clearScene();
 selected_tank.head.mesh.forEach(function(entry) {
-    console.log("head obj: ", entry);
+    //console.log("head obj: ", entry);
     head(entry);
 });
 
@@ -205,7 +207,7 @@ track_texture(selected_tank.tracks.textures.default);
 
 
 selected_tank.tracks.mesh.forEach(function(entry) {
-    console.log("track obj: ", entry);
+    //console.log("track obj: ", entry);
     tracks(entry);
 });
 
@@ -225,6 +227,14 @@ selected_tank=json_full.Tanks[value];
 if(ff){
     gui.remove(ff);
 };
+if (selected_tank.head.textures.hasOwnProperty("Default")){
+
+textr=selected_tank.head.textures["Default"];
+}
+else{
+textr=selected_tank.head.textures[Object.keys(selected_tank.head.textures)[0]];
+}
+head_texture(textr);
 add_menu(value);
 add_tank();
 
@@ -239,18 +249,49 @@ function add_menu(_name){
 //_name="Conqueror"
 //f3 = gui.addFolder('Mods');
 ff=gui.add(json, "Skins", json.Skins[_name]).onChange(function(value) {
-//console.log(value);
-//console.log(selected_tank.head.textures[value]);
 
 obj.Wireframe=false;
 textr=selected_tank.head.textures[value]
-//console.log(textr);
 head_texture(textr);
+
+
 });
 //f3.open();
 };
 
+
+
+var uri = window.location.href.split("#")[1];
+if (typeof uri !="undefined"){
+var t=unescape(uri.split("&")[0]);;
+var c=unescape(uri.split("&")[1]);
+}
+if (typeof t==="undefined" ){
+    t="A-20"
+}
+
+if (typeof c==="undefined" ){
+    c="Default"
+}
+
+if (json_full.Tanks[t]!="undefined" ){
+
+selected_tank=json_full.Tanks[t];
+}else{
 selected_tank=json_full.Tanks["A-20"];
+}
+
+if (selected_tank.head.textures.hasOwnProperty(c)){
+    textr=selected_tank.head.textures[c];
+}
+else if (selected_tank.head.textures.hasOwnProperty("Default")){
+
+    textr=selected_tank.head.textures["Default"];
+}
+else{
+    textr=selected_tank.head.textures[Object.keys(selected_tank.head.textures)[0]];
+}
+head_texture(textr);
 //selected_tank=json_full.Tanks["Dicker Max"];
 add_tank();
 
