@@ -250,7 +250,7 @@ head_texture(textr);
 //f3.open();
 };
 
-selected_tank=json_full.Tanks["Conqueror"];
+selected_tank=json_full.Tanks["A-20"];
 //selected_tank=json_full.Tanks["Dicker Max"];
 add_tank();
 
