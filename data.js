@@ -5,6 +5,7 @@ var data=`{
             "A-20 CM"
         ],
         "AMX 50 100": [
+            "Anime Itasensha AMX 50 100",
             "Default"
         ],
         "AMX Dracula": [
@@ -18,6 +19,7 @@ var data=`{
         ],
         "Centurion": [
             "GuP Centurion",
+            "Anime Itasensha Centurion",
             "Default",
             "GuP Centurion crash"
         ],
@@ -42,6 +44,7 @@ var data=`{
             "Christmas2",
             "T-34-85 chassis 01 AM",
             "Conquerorbup",
+            "Anime Itasensha Conqueror",
             "Default"
         ],
         "Crusader": [
@@ -55,11 +58,13 @@ var data=`{
         "Ferdinand": [
             "Ferdinand CM",
             "GuP Ferdinand",
-            "Default"
+            "Default",
+            "Anime Itasensha Ferdinand"
         ],
         "Grille 15 L63": [
             "Grille 15 L63 CM",
             "Grille 15 skin",
+            "Anime Itasensha Grille 15 L63 D",
             "Grille 15 L63 D"
         ],
         "Ha Go": [
@@ -86,15 +91,18 @@ var data=`{
             "IS-3 turret 02",
             "IS-3 turret 02 skin",
             "Default",
+            "Anime Itasensha IS-3",
             "IS-3 auto",
             "IS-3 skin"
         ],
         "Indien Panzer": [
+            "Anime Itasensha Indien Pz",
             "Indien Pz",
             "Indien Panzer CM"
         ],
         "JagdPanther": [
             "Default",
+            "Anime Itasensha JagdPantherII",
             "GuP JagdPanther"
         ],
         "JagdPzIV": [
@@ -103,7 +111,9 @@ var data=`{
         ],
         "JagdTiger": [
             "GuP JagdTiger",
-            "Default"
+            "Anime Itasensha JagdTiger",
+            "Default",
+            "JagdTiger.dx11"
         ],
         "KV2": [
             "Default",
@@ -116,6 +126,7 @@ var data=`{
         "M26 Pershing": [
             "GuP M26 Pershing turret 02",
             "M26 Pershing turret 02",
+            "Anime Itasensha M26 Pershing",
             "GuP M26 Pershing",
             "Default"
         ],
@@ -138,6 +149,7 @@ var data=`{
             "GuP Matilda"
         ],
         "Maus": [
+            "Anime Itasensha Maus",
             "GuP Maus",
             "Default"
         ],
@@ -163,6 +175,7 @@ var data=`{
             "GuP PzVI Tiger P"
         ],
         "PzVIB Tiger II": [
+            "Anime Itasensha PzVIB Tiger II",
             "Default",
             "GuP PzVIB Tiger II"
         ],
@@ -175,7 +188,8 @@ var data=`{
             "GuP Stug III"
         ],
         "T-28": [
-            "Default"
+            "Default",
+            "Anime Itasensha T28"
         ],
         "T-34": [
             "GuP T-34-85",
@@ -191,6 +205,7 @@ var data=`{
         "T95": [
             "Default",
             "GuP T95",
+            "Anime Itasensha T95",
             "GuP T95 crash"
         ],
         "Tetrarch LL": [
@@ -211,7 +226,8 @@ var data=`{
             "Default"
         ],
         "WZ-111": [
-            "Default"
+            "Default",
+            "Anime Itasensha WZ-111"
         ]
     },
     "Tanks": [
@@ -392,6 +408,10 @@ var data_full=`{
                     "1_chassis_wheel_L_08_batch_0.obj"
                 ],
                 "textures": {
+                    "Anime Itasensha AMX 50 100": {
+                        "file": "Anime_Itasensha_AMX_50_100.mali.png",
+                        "params": ""
+                    },
                     "Default": {
                         "file": "AMX_50_100.mali.png",
                         "params": ""
@@ -599,6 +619,10 @@ var data_full=`{
                     "1_chassis_wheel_L_08_batch_0.obj"
                 ],
                 "textures": {
+                    "Anime Itasensha Centurion": {
+                        "file": "Anime_Itasensha_Centurion.mali.png",
+                        "params": ""
+                    },
                     "Default": {
                         "file": "Centurion.mali.png",
                         "params": ""
@@ -1006,6 +1030,10 @@ var data_full=`{
                     "1_chassis_wheel_L_08_batch_0.obj"
                 ],
                 "textures": {
+                    "Anime Itasensha Conqueror": {
+                        "file": "Anime_Itasensha_Conqueror.mali.png",
+                        "params": ""
+                    },
                     "Christmas1": {
                         "file": "Christmas1_repeat.mali.png",
                         "params": "repeat"
@@ -1233,6 +1261,10 @@ var data_full=`{
                     "1_chassis_wheel_L_08_batch_0.obj"
                 ],
                 "textures": {
+                    "Anime Itasensha Ferdinand": {
+                        "file": "Anime_Itasensha_Ferdinand.mali.png",
+                        "params": ""
+                    },
                     "Default": {
                         "file": "Ferdinand_flip.mali.png",
                         "params": "flip"
@@ -1302,6 +1334,10 @@ var data_full=`{
                     "1_chassis_wheel_L_08_batch_0.obj"
                 ],
                 "textures": {
+                    "Anime Itasensha Grille 15 L63 D": {
+                        "file": "Anime_Itasensha_Grille_15_L63_D.mali.png",
+                        "params": ""
+                    },
                     "Grille 15 L63 CM": {
                         "file": "Grille_15_L63_CM.mali.png",
                         "params": ""
@@ -1664,6 +1700,10 @@ var data_full=`{
                     "1_chassis_wheel_L_08_batch_0.obj"
                 ],
                 "textures": {
+                    "Anime Itasensha IS-3": {
+                        "file": "Anime_Itasensha_IS-3.mali.png",
+                        "params": ""
+                    },
                     "Default": {
                         "file": "IS-3.mali.png",
                         "params": ""
@@ -1744,6 +1784,10 @@ var data_full=`{
                     "1_chassis_wheel_R_03_batch_0.obj"
                 ],
                 "textures": {
+                    "Anime Itasensha Indien Pz": {
+                        "file": "Anime_Itasensha_Indien_Pz.mali.png",
+                        "params": ""
+                    },
                     "Indien Panzer CM": {
                         "file": "Indien_Panzer_CM.mali.png",
                         "params": ""
@@ -1814,6 +1858,10 @@ var data_full=`{
                     "1_chassis_wheel_L_08_batch_0.obj"
                 ],
                 "textures": {
+                    "Anime Itasensha JagdPantherII": {
+                        "file": "Anime_Itasensha_JagdPantherII.mali.png",
+                        "params": ""
+                    },
                     "Default": {
                         "file": "JagdPanther.mali.png",
                         "params": ""
@@ -1954,12 +2002,20 @@ var data_full=`{
                     "1_chassis_wheel_L_08_batch_0.obj"
                 ],
                 "textures": {
+                    "Anime Itasensha JagdTiger": {
+                        "file": "Anime_Itasensha_JagdTiger.mali.png",
+                        "params": ""
+                    },
                     "Default": {
                         "file": "JagdTiger_flip.mali.png",
                         "params": "flip"
                     },
                     "GuP JagdTiger": {
                         "file": "GuP_JagdTiger.mali.png",
+                        "params": ""
+                    },
+                    "JagdTiger.dx11": {
+                        "file": "JagdTiger.dx11.png",
                         "params": ""
                     },
                     "mask": {
@@ -2191,6 +2247,10 @@ var data_full=`{
                     "1_chassis_wheel_L_08_batch_0.obj"
                 ],
                 "textures": {
+                    "Anime Itasensha M26 Pershing": {
+                        "file": "Anime_Itasensha_M26_Pershing.mali.png",
+                        "params": ""
+                    },
                     "Default": {
                         "file": "M26_Pershing.mali.png",
                         "params": ""
@@ -2582,6 +2642,10 @@ var data_full=`{
                     "1_chassis_wheel_L_08_batch_0.obj"
                 ],
                 "textures": {
+                    "Anime Itasensha Maus": {
+                        "file": "Anime_Itasensha_Maus.mali.png",
+                        "params": ""
+                    },
                     "Default": {
                         "file": "Maus_flip.mali.png",
                         "params": "flip"
@@ -3024,6 +3088,10 @@ var data_full=`{
                     "1_chassis_wheel_L_08_batch_0.obj"
                 ],
                 "textures": {
+                    "Anime Itasensha PzVIB Tiger II": {
+                        "file": "Anime_Itasensha_PzVIB_Tiger_II.mali.png",
+                        "params": ""
+                    },
                     "Default": {
                         "file": "PzVIB_Tiger_II_flip.mali.png",
                         "params": "flip"
@@ -3275,6 +3343,10 @@ var data_full=`{
                     "1_chassis_wheel_L_08_batch_0.obj"
                 ],
                 "textures": {
+                    "Anime Itasensha T28": {
+                        "file": "Anime_Itasensha_T28.mali.png",
+                        "params": ""
+                    },
                     "Default": {
                         "file": "T-28.mali.png",
                         "params": ""
@@ -3543,6 +3615,10 @@ var data_full=`{
                     "1_chassis_wheel_L_08_batch_0.obj"
                 ],
                 "textures": {
+                    "Anime Itasensha T95": {
+                        "file": "Anime_Itasensha_T95.mali.png",
+                        "params": ""
+                    },
                     "Default": {
                         "file": "T95.mali.png",
                         "params": ""
@@ -3877,6 +3953,10 @@ var data_full=`{
                     "1_gun_04_batch_1.obj"
                 ],
                 "textures": {
+                    "Anime Itasensha WZ-111": {
+                        "file": "Anime_Itasensha_WZ-111.mali.png",
+                        "params": ""
+                    },
                     "Default": {
                         "file": "WZ-111.mali.png",
                         "params": ""
