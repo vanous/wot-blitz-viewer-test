@@ -67,6 +67,7 @@ var data_full=`{
                     }
                 }
             },
+            "name": "A-20",
             "path_meshes": "A-20.sc2_meshes/",
             "path_textures": "A-20.sc2_textures/",
             "tracks": {

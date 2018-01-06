@@ -238,6 +238,9 @@ head_texture(textr);
 add_menu(value);
 add_tank();
 
+var uri = window.location.href.split("?")[0];
+history.pushState("", "/wot-blitz-viewer-test", uri + "?" + value);
+
 });
 
 //f2.open();
@@ -250,6 +253,10 @@ function add_menu(_name){
 //f3 = gui.addFolder('Mods');
 ff=gui.add(json, "Skins", json.Skins[_name]).onChange(function(value) {
 
+var uri = window.location.href.split("?")[0];
+history.pushState("", "/wot-blitz-viewer-test", uri + "?" + selected_tank.name + "&"+ value);
+
+
 obj.Wireframe=false;
 textr=selected_tank.head.textures[value]
 head_texture(textr);
@@ -261,7 +268,7 @@ head_texture(textr);
 
 
 
-var uri = window.location.href.split("#")[1];
+var uri = window.location.href.split("?")[1];
 if (typeof uri !="undefined"){
 var t=unescape(uri.split("&")[0]);;
 var c=unescape(uri.split("&")[1]);
