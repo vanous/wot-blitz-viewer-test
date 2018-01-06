@@ -6,7 +6,7 @@ import json
 path="./"
 dirs = [str(item) for item in Path(path).iterdir() if item.is_dir()]
 
-data={"Skins":{},"Tanks":[""]}
+data={"Skins":{},"Tanks":[]}
 data_full={"Tanks":{}}
 
 for d in dirs:
@@ -58,9 +58,12 @@ for d in dirs:
                     if "crash" not in f.lower():
                         data_full["Tanks"][tank_name]["tracks"]["mesh"].append(f)
 
-                    
-print("var data=`{}`".format(json.dumps(data, indent=4, sort_keys=True)))
+a=data["Tanks"]
+a.sort()
+data["Tanks"]=a
+
+print("var data=`{}`".format(json.dumps(data, indent=4,sort_keys=True)))
 print("\n\n")
-print("var data_full=`{}`".format(json.dumps(data_full, indent=4, sort_keys=True)))
+print("var data_full=`{}`".format(json.dumps(data_full, indent=4,sort_keys=True)))
 
 #files = [str(item) for item in Path(path).iterdir() if item.is_file()]
